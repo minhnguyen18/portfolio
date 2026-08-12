@@ -357,6 +357,23 @@ article .icon {
 
 #projects {
   position: relative;
+  height: fit-content;
+  min-height: 96vh;
+  padding-bottom: 4rem;
+}
+
+/* 3 project cards per row */
+#projects .about-containers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Project card */
+#projects .details-container {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .color-container {
@@ -379,7 +396,6 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
 }
-
 /* CONTACT */
 
 #contact {
