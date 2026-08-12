@@ -353,6 +353,7 @@ article .icon {
   cursor: default;
 }
 
+
 /* PROJECTS SECTION */
 
 #projects {
@@ -362,7 +363,7 @@ article .icon {
   padding-bottom: 4rem;
 }
 
-/* 3 project cards per row */
+/* 3 cards per row */
 #projects .about-containers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -370,10 +371,18 @@ article .icon {
   align-items: stretch;
 }
 
-/* Project card */
+/* Each project card */
 #projects .details-container {
   width: 100%;
   box-sizing: border-box;
+
+  display: grid;
+
+  /* image | title | description | button */
+  grid-template-rows: 190px 110px 1fr auto;
+
+  min-height: 650px;
+  padding: 2rem;
 }
 
 .color-container {
@@ -381,21 +390,60 @@ article .icon {
   background: rgb(250, 250, 250);
 }
 
-.project-img {
-  border-radius: 2rem;
-  width: 50%;
-  height: 50%;
+
+/* SAME IMAGE AREA */
+#projects .article-container {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.project-img {
+  width: auto;
+  height: 160px;
+  max-width: 80%;
+  object-fit: contain;
+  border-radius: 2rem;
+}
+
+
+/* SAME TITLE AREA */
 .project-title {
-  margin: 1rem;
+  margin: 0;
   color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* SAME DESCRIPTION AREA */
+#projects .details-container > p {
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/* BUTTONS ALIGN AT BOTTOM */
+#projects .btn-container {
+  margin-top: 1.5rem;
+  align-self: end;
 }
 
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+
 /* CONTACT */
 
 #contact {
